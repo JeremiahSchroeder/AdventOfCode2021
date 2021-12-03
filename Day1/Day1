@@ -1,0 +1,27 @@
+from time import sleep, perf_counter
+
+def solution():
+    DepthInput = open('InputDay1Puzzle1','r')
+    # DepthInput = open('test','r')
+    DepthArray = DepthInput.readlines()
+    DepthInput.close()
+
+    numIncreased = 0
+    count = 0
+
+    for i in range (0, len(DepthArray)-1):
+        if int(DepthArray[i+1]) >= int(DepthArray[i]):
+            numIncreased+=1
+
+        count+=1
+
+        count+=1
+
+    print(numIncreased)
+    print(count)
+
+start = perf_counter()
+solution()
+end = perf_counter()
+execution_time = (end - start)
+print(execution_time)
